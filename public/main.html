@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIG2IhTZZ6itxcMbZHW9Y_t46A_0iVeKE"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="weatherForm" class="text-container">
+            <input type="text" id="cityInput" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+            <button id="autoFillButton">Use My City</button>
+        </form>
+        <div id="weatherResult" class="hidden">
+            <div class="text-container">
+                <h2>Weather in <span id="cityName"></span></h2>
+                <img id="weatherIcon" alt="Weather Icon" class="hidden">
+            </div>
+            <div class="text-container">
+                <div>
+                    <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+                    <p><strong>Description:</strong> <span id="description"></span></p>
+                    <p><strong>Coordinates:</strong> <span id="coordinates"></span></p>
+                    <p><strong>Feels Like:</strong> <span id="feelsLike"></span>°C</p>
+                    <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                </div>
+                <div>
+                    <p><strong>Pressure:</strong> <span id="pressure"></span> hPa</p>
+                    <p><strong>Wind Speed:</strong> <span id="windSpeed"></span> m/s</p>
+                    <p><strong>Country:</strong> <span id="country"></span></p>
+                    <p><strong>Rain Volume:</strong> <span id="rainVolume"></span></p>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div>
+                <h2>Air Quality</h2>
+                <p><strong>Air Quality Index (AQI):</strong> <span id="aqi"></span></p>
+                <p><strong>Category:</strong> <span id="category"></span></p>
+                <p><strong>Primary Pollutant:</strong> <span id="primaryPollutant"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
